@@ -1,0 +1,147 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 12:34:51  November 27, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		comunicacion_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C6GES
+set_global_assignment -name TOP_LEVEL_ENTITY de10_lite
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:19:25 JUNE 21,2016"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_location_assignment PIN_B14 -to KEY[0]
+set_location_assignment PIN_F15 -to KEY[1]
+set_location_assignment PIN_A8 -to LEDR[0]
+set_location_assignment PIN_A9 -to LEDR[1]
+set_location_assignment PIN_A10 -to LEDR[2]
+set_location_assignment PIN_B10 -to LEDR[3]
+set_location_assignment PIN_D13 -to LEDR[4]
+set_location_assignment PIN_C13 -to LEDR[5]
+set_location_assignment PIN_E14 -to LEDR[6]
+set_location_assignment PIN_D14 -to LEDR[7]
+set_location_assignment PIN_A11 -to LEDR[8]
+set_location_assignment PIN_B11 -to LEDR[9]
+set_location_assignment PIN_AB16 -to GSENSOR_CS_N
+set_location_assignment PIN_Y14 -to GSENSOR_INT[1]
+set_location_assignment PIN_AB15 -to GSENSOR_SCLK
+set_location_assignment PIN_V11 -to GSENSOR_SDI
+set_location_assignment PIN_V12 -to GSENSOR_SDO
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name DEVICE_MIGRATION_LIST 10M50DAF484C6GES
+set_global_assignment -name QIP_FILE v/spi_pll.qip
+set_global_assignment -name SOURCE_FILE v/spi_param.h
+set_global_assignment -name VERILOG_FILE v/spi_ee_config.v
+set_global_assignment -name VERILOG_FILE v/spi_controller.v
+set_global_assignment -name VERILOG_FILE v/reset_delay.v
+set_global_assignment -name VERILOG_FILE v/led_driver.v
+set_global_assignment -name SDC_FILE DE10_LITE_GSensor.sdc
+set_global_assignment -name VHDL_FILE de10_lite.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDI
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDO
+set_location_assignment PIN_P11 -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_location_assignment PIN_Y13 -to GSENSOR_INT[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT
+set_global_assignment -name VHDL_FILE uart.vhd
+set_location_assignment PIN_A7 -to botones[1]
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to botones[1]
+set_location_assignment PIN_B8 -to botones[0]
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to botones[0]
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to botones
+set_location_assignment PIN_C11 -to switches[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to switches[1]
+set_location_assignment PIN_C10 -to switches[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to switches[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to switches
+set_location_assignment PIN_AA8 -to rx
+set_location_assignment PIN_Y7 -to tx
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to tx
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rx
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY
+set_global_assignment -name VHDL_FILE clksec.vhd
+set_global_assignment -name VHDL_FILE bcd7seg_sec.vhd
+set_location_assignment PIN_D15 -to display[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to display[7]
+set_location_assignment PIN_C17 -to display[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to display[6]
+set_location_assignment PIN_D17 -to display[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to display[5]
+set_location_assignment PIN_E16 -to display[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to display[4]
+set_location_assignment PIN_C16 -to display[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to display[3]
+set_location_assignment PIN_C15 -to display[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to display[2]
+set_location_assignment PIN_E15 -to display[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to display[1]
+set_location_assignment PIN_C14 -to display[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to display[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to display
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
